@@ -471,7 +471,6 @@
 
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
-
                     <div class="mb-3">
                         <label for="login-field" class="pb-2 fw-semibold">Email / Phone / Username</label>
                         <input type="text" name="email" id="login-field" class="form-control"

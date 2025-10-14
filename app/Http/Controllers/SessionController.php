@@ -18,17 +18,18 @@ class SessionController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect(url()->previous() . '#login')->withErrors($validator, 'register')->withInput();
+            return back()->withErrors($validator, 'login')
+                     ->withInput();
         }
 
-        if (!Auth::attempt(array_merge($validator->validated(), ['is_active' => true]))) {
+        if (!Auth::attempt(array_merge($validator->validated(), ['is_active' => 1]))) {
             return back()->withErrors(['message' => 'Invalid credentials or account not active'], 'login')
                 ->withInput();
         }
 
         request()->session()->regenerate();
 
-        return redirect("/staff/dashboard");
+        return redirect("/dashboard");
     }
 
     public function destroy(){
