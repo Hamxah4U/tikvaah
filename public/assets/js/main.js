@@ -51,14 +51,14 @@
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
+  // document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+  //   navmenu.addEventListener('click', function(e) {
+  //     // e.preventDefault();
+  //     this.parentNode.classList.toggle('active');
+  //     this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+  //     e.stopImmediatePropagation();
+  //   });
+  // });
 
   /**
    * Preloader
@@ -228,5 +228,19 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#laravelForm');
+  if (form) {
+    // Remove Arsha’s event listeners entirely
+    form.onsubmit = null;
+
+    // Or manually allow normal submit
+    form.addEventListener('submit', e => {
+      e.stopImmediatePropagation(); // Stop Arsha’s script
+      form.submit(); // Force submit to Laravel
+    });
+  }
+});
 
 })();
