@@ -29,6 +29,20 @@ class SessionController extends Controller
 
         request()->session()->regenerate();
 
+        $user = Auth::user();
+
+        switch($user->role){
+            case 'admin':
+                return redirect()->intended('/admin/dashboard');
+            case 'freelancer':
+                return redirect()->intended('/freelancer/dashboard');
+            case 'guest':
+                return redirect()->intended('/guest/dashboard');
+            case 'user':
+            default:
+                return redirect()->intended('/user/dashboard');
+        }
+
         return redirect("/dashboard");
     }
 

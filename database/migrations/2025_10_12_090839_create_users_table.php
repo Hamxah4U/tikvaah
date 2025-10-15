@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Gender;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -9,6 +10,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    // 0001_01_01_000000_create_users_table.php
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
@@ -16,12 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->nullable();
-            $table->string('gender')->nullable();
+           $table->foreignIdFor(Gender::class)->nullable()->constrained('genders')->onDelete('cascade');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('profile_image')->nullable(); 
-            $table->enum('role', ['guest', 'user', 'admin']);
+            $table->enum('role', ['guest', 'user', 'admin', 'freelancer']);
             $table->boolean('is_active')->default(true);
+            $table->enum('payment_status', ['paid', 'not-paid'])->default('not-paid');
             $table->rememberToken();
             $table->timestamps();
         });

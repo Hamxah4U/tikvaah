@@ -356,7 +356,7 @@
       </section><!-- /Team Section -->
 
       <!-- Contact Section -->
-      <section id="contact" class="contact section">
+    <section id="contact" class="contact section">
 
           <!-- Section Title -->
           <div class="container section-title" data-aos="fade-up">
@@ -450,6 +450,7 @@
 
         <!-- Login/enroll -->
     <section id="user" class="contact section">
+        <div id="login">
         <div class="container section-title" data-aos="fade-up">
             <h2>Users / Enrollment</h2>
         </div>
@@ -458,7 +459,7 @@
         <div class="row gy-4 justify-content-center">
 
         <!-- Login Card (Left) -->
-        <div class="col-lg-5" id="login">
+        <div class="col-lg-5" id="">
             <div class="card shadow-lg border-0 rounded-4">
             <div class="card-header bg-info text-white text-center py-3">
                 <h4 class="mb-0">Login</h4>
@@ -538,16 +539,16 @@
 
                     <div class="col-md-6">
                     <label for="gender" class="pb-2 fw-semibold">Gender</label>
-                    <select name="gender" id="gender" class="form-select">
+                    <select name="gender_id" id="gender_id" class="form-select">
                         <option value="">Select Gender</option>
                         @foreach ($genders as $gender)
                         <option value="{{ $gender->id }}"
-                            {{ $gender->id == old('gender') ? 'selected' : '' }}>
+                            {{ $gender->id == old('gender_id') ? 'selected' : '' }}>
                             {{ $gender->name }}
                         </option>
                         @endforeach
                     </select>
-                    <x-form-error name="gender" :bag="'register'" />
+                    <x-form-error name="gender_id" :bag="'register'" />
                     </div>
 
                     <div class="col-md-6">
@@ -575,6 +576,7 @@
 
         </div> <!-- End Row -->
         </div> <!-- End Container -->
+        </div>
     </section>
 
 </main>
@@ -690,21 +692,6 @@
         data-cf-beacon='{"version":"2024.11.0","token":"68c5ca450bae485a842ff76066d69420","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous">
     </script>
-
-    <script>
-    // Auto-hide validation errors after 5 seconds
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     const errorMessages = document.querySelectorAll('.error-message');
-    //     if (errorMessages.length > 0) {
-    //     setTimeout(() => {
-    //         errorMessages.forEach(el => {
-    //         el.classList.add('fade-out');
-    //         setTimeout(() => el.remove(), 600); // remove from DOM after fade
-    //         });
-    //     }, 5000); // 5000ms = 5 seconds
-    //     }
-    // });
-</script>
 
 </body>
 
