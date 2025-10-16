@@ -22,7 +22,7 @@
         <div class="card shadow-lg border-0 rounded-4">
             <div class="card-body p-5">
                 <h2 class="text-center mb-4 text-primary fw-bold">
-                    Tikvaah Tech Solutions ICT Centre
+                    Tikvaah Tech Solutions
                 </h2>
                 <h5 class="text-center mb-3 text-secondary" id="titleText">
                     Rules and Regulations Governing the ICT Training Program
@@ -78,7 +78,7 @@
                     <div class="form-check mt-4">
                         <input class="form-check-input" type="checkbox" id="agreeCheckboxHausa">
                         <label class="form-check-label fw-semibold text-dark" for="agreeCheckboxHausa">
-                            Na karanta kuma na amince da duk ƙa’idodin cibiyar Tikvaah Tech Solutions ICT Centre.
+                            Na karanta kuma na amince da duk ƙa’idodin cibiyar Tikvaah Tech Solutions.
                         </label>
                     </div>
                 </div>
@@ -123,6 +123,7 @@
             // Agreement logic
             function updatePayButton() {
                 const isChecked = engCheckbox.checked || hausaCheckbox.checked;
+
                 if (isChecked) {
                     payButton.disabled = false; // Enable the button
                 } else {

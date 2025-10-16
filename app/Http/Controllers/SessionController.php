@@ -18,12 +18,14 @@ class SessionController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator, 'login')
-                     ->withInput();
+            return redirect('/#login')->withErrors($validator, 'login');
+            // return redirect(url()->previous() . '#login')->withErrors($validator, 'login');
+            // return back()->withErrors($validator, 'login')
+            //          ->withInput();
         }
 
         if (!Auth::attempt(array_merge($validator->validated(), ['is_active' => 1]))) {
-            return back()->withErrors(['message' => 'Invalid credentials or account not active'], 'login')
+             return redirect('/#login')->withErrors(['email' => 'Invalid credentials or account not active'], 'login')
                 ->withInput();
         }
 
@@ -39,8 +41,7 @@ class SessionController extends Controller
             case 'guest':
                 return redirect()->intended('/guest/dashboard');
             case 'user':
-            default:
-                return redirect()->intended('/user/dashboard');
+            default:return redirect()->intended('/user/dashboard');
         }
 
         return redirect("/dashboard");

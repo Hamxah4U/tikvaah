@@ -16,7 +16,7 @@ class GuestController extends Controller
     {
         //  dd($request->all());
         $request->validate([
-            'email' => ['required', 'email'];
+            'email' => ['required', 'email']
         ]);
 
         $reference = 'TIKVAAH_' . uniqid();
