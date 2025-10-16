@@ -494,7 +494,7 @@
 
             <div class="card-footer text-center bg-light py-3">
                 <small>Don’t have an account?
-                <a href="#register" class="text-danger fw-semibold">Register</a>
+                <a href="#user" class="text-danger fw-semibold">Register</a>
                 </small>
             </div>
             </div>

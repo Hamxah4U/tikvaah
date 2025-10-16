@@ -16,11 +16,11 @@ class GuestController extends Controller
     {
         //  dd($request->all());
         $request->validate([
-            'email' => 'required|email',
+            'email' => ['required', 'email'];
         ]);
 
         $reference = 'TIKVAAH_' . uniqid();
-        $amount = 30000 * 100; // in kobo
+        $amount = 30000 * 100; 
 
         // Save payment record
         Payment::create([
