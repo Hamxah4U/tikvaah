@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Mail\UserRegisteredMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -32,6 +34,8 @@ class UserController extends Controller
         $data = $attribute->validated();
 
         User::create($data);
+
+        Mail::to($data['email'])->send(new UserRegisteredMail($data));
 
         return redirect(url()->previous() . '#user')->with('success', 'User registered successfully!');
     }

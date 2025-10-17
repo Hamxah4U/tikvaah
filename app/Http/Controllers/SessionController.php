@@ -19,9 +19,6 @@ class SessionController extends Controller
 
         if ($validator->fails()) {
             return redirect('/#login')->withErrors($validator, 'login');
-            // return redirect(url()->previous() . '#login')->withErrors($validator, 'login');
-            // return back()->withErrors($validator, 'login')
-            //          ->withInput();
         }
 
         if (!Auth::attempt(array_merge($validator->validated(), ['is_active' => 1]))) {
