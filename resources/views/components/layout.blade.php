@@ -276,7 +276,7 @@
                                 <p>Founder of Tikvaah Tech Solutions. Full-stack developer with a passion for empowering
                                     others through tech education.</p>
                                 <div class="social">
-                                    <a href="https://x.com/hamxah23?t=f5qYuwX5Rlw3RQtRV6GlZQ&s=09"><i class="bi bi-twitter-x"></i></a>
+                                    <a href="https://x.com/hamxah23?t=f5qYuwX5Rlw3RQtRV6GlZQ&s=09" title="Twitter"><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href="https://wa.me/238037856962"><i class="bi bi-whatsapp"></i> </a>
                                     <a href="https://t.me/Hamxah4u"><i class="bi bi-telegram"></i> </a>
@@ -290,8 +290,9 @@
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="team-member d-flex align-items-start">
-                            <div class="pic"><img src="{{ asset('assets/img/usman_tikvaah.jpg') }}"
-                                    class="img-fluid" alt=""></div>
+                            <div class="pic">
+                                <img src="{{ asset('assets/img/usman_tikvaah.jpg') }}"class="img-fluid" alt="">
+                            </div>
                             <div class="member-info">
                                 <h4>Usman Abubakar</h4>
                                 <span>Senior Graphics Designer</span>
@@ -345,6 +346,61 @@
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""> <i class="bi bi-linkedin"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="team-member d-flex align-items-start">
+                            <div class="pic"><img src="assets/img/person/person-f-4.webp" class="img-fluid"
+                                    alt=""></div>
+                            <div class="member-info">
+                                <h4>Ibrahim Aminu Ibrahim</h4>
+                                <span>Front-End Developer/Graphic Designer</span>
+                                <p>
+                                    Ibrahim is a versatile front-end developer and graphic designer, skilled in creating
+                                    visually appealing and user-friendly web interfaces. He combines his coding skills
+                                    with a keen eye for design to deliver engaging digital experiences.
+                                </p>
+                                <div class="social">
+                                    <a href="https://x.com/IbrahimAmi45097?t=CvahMs9KY68eMsW1wReMlw&s=09"><i class="bi bi-twitter-x"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href="https://wa.me/07084190991"><i class="bi bi-whatsapp"></i> </a>
+                                    <a href="https://t.me/abba016"><i class="bi bi-telegram"></i> </a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-tiktok"></i> </a>
+                                    <a href=""><i class="bi bi-linkedin"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="team-member d-flex align-items-start">
+                            <div class="pic">
+                                <img src="assets/img/sadiq.webp" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/sadiq.png') }}"class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Abubakar Ahmad Imam</h4>
+                                <span>Graphic Designer</span>
+                                <p>
+                                    Abubakar is a talented graphic designer with a keen eye for detail and creativity.
+                                    Skilled in CorelDraw, Photoshop, and Illustrator, 
+                                    he creates impactful brand identities and digital designs that effectively communicate ideas and engage audiences.
+                                </p>
+                                <div class="social">
+                                    <div class="social">
+                                    <a href="https://x.com/THEYOUNGGUY001?t=_pj7KmX9EtVJ5qZ-MNuAYA&s=08" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                    <a href="https://www.facebook.com/abubakarsadeeq0"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://wa.me/09069710443"><i class="bi bi-whatsapp"></i> </a>
+                                    <a href=""><i class="bi bi-telegram"></i> </a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href="https://www.tiktok.com/@theyoungguy1?_t=ZS-90qrZ2lebJs&_r=1"><i class="bi bi-tiktok"></i> </a>
+                                    <a href=""><i class="bi bi-linkedin"></i> </a>
+                                    <a href=""><i class="bi bi-github"></i> </a>
+                                </div>
                                 </div>
                             </div>
                         </div>
