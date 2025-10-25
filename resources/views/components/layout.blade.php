@@ -361,7 +361,7 @@
                                 <p>
                                     Ibrahim is a versatile front-end developer and graphic designer, skilled in creating
                                     visually appealing and user-friendly web interfaces. He combines his coding skills
-                                    with a keen eye for design to deliver engaging digital experiences.
+                                    with a keen eye for design to deliver engaging digital experiences. 
                                 </p>
                                 <div class="social">
                                     <a href="https://x.com/IbrahimAmi45097?t=CvahMs9KY68eMsW1wReMlw&s=09"><i class="bi bi-twitter-x"></i></a>
@@ -374,7 +374,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- End Team Member -->
+                    </div><!-- End Team Member  -->
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="team-member d-flex align-items-start">
